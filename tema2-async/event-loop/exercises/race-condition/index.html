@@ -15,12 +15,12 @@
 
     image.src = url; // I suppose the "load" process starts here
 
-    let waitFor = 0;
-    //let waitFor = 2000;
+    //let waitFor = 0;
+    let waitFor = 2000;
     setTimeout(function(){
       // The onload event occurs when an object has been loaded
       // We only append it to the container when the load has finished
-      // If 1000 the handler is inserted in the event queue too late
+      // If the handler is inserted in the event queue too late ...
       // If an EventListener is added to an EventTarget while it is 
       // processing an event, that event does not trigger the listener.
       image.addEventListener("load", function() {

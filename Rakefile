@@ -1,5 +1,5 @@
 desc "Publicar en GitHub los apuntes"
-task :default => [ :pushhtml ] do # trabajamos en la rama curso2021
+task :default => [ :pushhtml ] do  # trabajamos en la rama curso2021
   sh "git ci -am '2020-2021' && git push -u origin main"
 end
 
@@ -36,6 +36,11 @@ end
 
 task :pushhtml => [ :b ] do
   sh "./scripts/build-and-push.sh"
+end
+
+desc "make ../website a repo with remotes"
+task :websitegit do
+  sh "./scripts/website"
 end
 
 desc "sytws: build and run with http-server -p 8080 -a 10.6.128.216"

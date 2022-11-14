@@ -12,9 +12,9 @@ async function loadJson(url) { // (1)
   throw new Error(response.status);
 }
 
-loadJson('https://api.github.com/users/jtleek/repos'
+loadJson('https://api.github.com/users/crguezl/repos'
         /* 'no-such-user.json'*/
 )
-  .then(r => alert(JSON.stringify(r)))
-  .catch(alert); // Error: 404 (4)
+  .then(r => console.log(r[0]))
+  .catch(console.log); // Error: 404 (4)
 </script>
